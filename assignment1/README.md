@@ -1,16 +1,15 @@
-# Image Composition
+Image Composition
+==
 
 ## Table of Contents
 
-- [Image Composition](#image-composition)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Technologies](#technologies)
-  - [Setup](#setup)
-  - [Result](#result)
-  - [Notes](#notes)
-  - [Contact](#contact)
-  - [License](#license)
+- [Introduction](#introduction)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Result](#result)
+- [Notes](#notes)
+- [Contact](#contact)
+- [License](#license)
 
 ## Introduction
 
