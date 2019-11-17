@@ -1,0 +1,7 @@
+TEST_ITEM,PSNR_VAL
+hsize=3x3,33.8678
+hsize=5x5,32.5891
+hsize=7x7,32.4933
+sigma=1,33.8678
+sigma=5,32.52
+sigma=10,32.4847
