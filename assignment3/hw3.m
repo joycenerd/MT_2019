@@ -514,7 +514,7 @@ sample_frequency=-sample_rate_3/2:df:sample_rate_3/2-df;
 sample_audio_fft=fftshift(fft(sample_3))/length(fft(sample_3));
 disp(frequency_3(1));
 disp(sample_frequency(1));
-disp(frequency_3(length(frequency_2)));
+disp(frequency_3(length(frequency_3)));
 disp(sample_frequency(length(sample_frequency)));
 sample_points=0:1050:22050;
 j=1;
