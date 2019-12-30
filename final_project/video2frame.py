@@ -1,6 +1,25 @@
 import cv2
+import time
+import os
 
-vidcap=cv2.VideoCapture('./src/morphing1/Morphing1.mp4')
-print("SUCCESS")
+def vid2frame(vid_name,wrt_dir):
+    start_time=time.time()
+    vidcap=cv2.VideoCapture(vid_name)
+    print(vid_name)
+    success,image=vidcap.read()
+    count=0
+
+    while success:
+        cv2.imwrite(os.path.join(wrt_dir,"frame%d.jpg") % count,image)
+        success,image=vidcap.read()
+        print('Read a new frame: ',success)
+        count+=1
+    print("--- %s seconds ---" %(time.time()-start_time))
+    print("\n")
+
+vid2frame("./src/morphing1/Morphing1.mp4","./src/morphing1")
+vid2frame("./src/morphing2/Morphing2.mp4","./src/morphing2")
+
+
 
 # https://stackoverflow.com/questions/33311153/python-extracting-and-saving-video-frames
