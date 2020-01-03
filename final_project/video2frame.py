@@ -8,7 +8,7 @@ def vid2frame(vid_name,wrt_dir):
     print(vid_name)
     success,image=vidcap.read()
     count=0
-
+    
     while success:
         cv2.imwrite(os.path.join(wrt_dir,"frame%d.jpg") % count,image)
         success,image=vidcap.read()
@@ -17,8 +17,8 @@ def vid2frame(vid_name,wrt_dir):
     print("--- %s seconds ---" %(time.time()-start_time))
     print("\n")
 
-vid2frame("./src/morphing1/Morphing1.mp4","./src/morphing1")
-vid2frame("./src/morphing2/Morphing2.mp4","./src/morphing2")
+vid2frame("./src/morphing1/morphing1.mp4","./src/morphing1")
+vid2frame("./src/morphing2/morphing2.mp4","./src/morphing2")
 
 
 
