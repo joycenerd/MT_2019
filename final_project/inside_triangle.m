@@ -1,4 +1,4 @@
-function True=inside_triangle(P,P1,P2,P3);
+function t=inside_triangle(P,P1,P2,P3);
 %inside_triangle is used to check if a point P is inside
 %the triangle P1P2P3 or not. 
 %
@@ -29,21 +29,26 @@ function True=inside_triangle(P,P1,P2,P3);
 %
 
 %Written by: Nassim Khaled-July 2009
-x1=P1(1);
-y1=P1(2);
+%x1=P1(1);
+%y1=P1(2);
 
-x2=P2(1);
-y2=P2(2);
+%x2=P2(1);
+%y2=P2(2);
 
-x3=P3(1);
-y3=P3(2);
+%x3=P3(1);
+%y3=P3(2);
 
-x=P(1);
-y=P(2);
+%x=P(1);
+%y=P(2);
 
-Area_PP1P2 = 1/2. *abs(det([x y 1;x1 y1 1;x2 y2 1]));
-Area_PP2P3 = 1/2. *abs(det([x y 1;x2 y2 1;x3 y3 1]));
-Area_PP3P1 = 1/2. *abs(det([x y 1;x3 y3 1;x1 y1 1]));
-Area_P1P2P3 = 1/2. *abs(det([x1 y1 1;x2 y2 1;x3 y3 1]));
-Sum=(Area_PP1P2 + Area_PP2P3 + Area_PP3P1);
-True=isequal(Sum, Area_P1P2P3);
+%Area_PP1P2 = 1/2. *abs(det([x y 1;x1 y1 1;x2 y2 1]));
+%Area_PP2P3 = 1/2. *abs(det([x y 1;x2 y2 1;x3 y3 1]));
+%Area_PP3P1 = 1/2. *abs(det([x y 1;x3 y3 1;x1 y1 1]));
+%Area_P1P2P3 = 1/2. *abs(det([x1 y1 1;x2 y2 1;x3 y3 1]));
+%Sum=(Area_PP1P2 + Area_PP2P3 + Area_PP3P1);
+%True=isequal(Sum, Area_P1P2P3);
+
+P12 = P1-P2; P23 = P2-P3; P31 = P3-P1;
+t = sign(det([P31;P23]))*sign(det([P3-P;P23])) >= 0 & ...
+    sign(det([P12;P31]))*sign(det([P1-P;P31])) >= 0 & ...
+    sign(det([P23;P12]))*sign(det([P2-P;P12])) >= 0 ;
