@@ -19,7 +19,3 @@ def vid2frame(vid_name,wrt_dir):
 
 vid2frame("./src/morphing1/morphing1.mp4","./src/morphing1")
 vid2frame("./src/morphing2/morphing2.mp4","./src/morphing2")
-
-
-
-# https://stackoverflow.com/questions/33311153/python-extracting-and-saving-video-frames

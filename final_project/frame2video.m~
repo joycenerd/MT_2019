@@ -1,5 +1,0 @@
-video=VideoWriter('morphing.mp4');
-open(video);
-
-for i=0:29
-end

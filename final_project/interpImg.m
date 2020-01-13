@@ -15,15 +15,6 @@ function interVal=interpImg(img,yx,zpad)
 % interpImg(img,[2.4,2.2])
 % --> 4.6
 %
-%                                   Disi A, Sep,16th,2013
-%                                   adis@mit.edu
-
-% Update with Bug fix suggested by Sanjuro
-% There is bug. When x or y is under 1 or over max size (eg. [2.4, 0]) and with zpad = false, then you try get not integer indexed pixel in line 60: 
-% pixVal=img(y0,x0,:);
-
-% should be: 
-% pixVal=img(ceil(y0),ceil(x0),:);
 
 if nargin<4,RGB=ndims(img);RGB(RGB<3)=1; end
 if nargin<3,zpad=true; end
@@ -64,7 +55,7 @@ if (x<=0)||(x>COL)||(y<=0)||(y>ROW)
         y0=y;x0=x;
         y0(y0<1)=1; x0(x0<1)=1;
         y0(y0>ROW)=ROW;x0(x0>COL)=COL;
-        % Bug fix suggested by Sanjuro
+    
         pixVal=img(ceil(y0),ceil(x0),:);
     end
 else

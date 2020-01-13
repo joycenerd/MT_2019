@@ -1,4 +1,4 @@
-for frame=2:29
+for frame=0:29
     
     morphing1="src/coordinates/morphing1/frame"+frame+".csv";
     morphing2="src/coordinates/morphing2/frame"+frame+".csv";
